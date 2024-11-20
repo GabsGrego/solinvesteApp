@@ -13,9 +13,7 @@ const LoginScreen: React.FC = () => {
 
 
     return (
-        <ImageBackground
-            source={require('../components/bgLogin.jpg')}
-            style={styles.background}>
+        <ImageBackground source={require('../components/bgLogin.jpg')} style={styles.background}>
         <VStack space={4} padding={5} alignItems="center" justifyContent="center" flex={1}>
             <Image source={require('../components/logoApp.png')} alt="img" maxWidth={"100%"} />
             <Box padding={2} bg={"white"} borderRadius={8}>

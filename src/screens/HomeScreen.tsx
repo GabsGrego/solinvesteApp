@@ -24,7 +24,7 @@ return (
                 <IconButton icon={<MaterialIcons name="info-outline" size={25} color="yellow" />}
                 onPress={() => console.log("Info")}/>
             </HStack>
-        </Box>
+        </Box> 
         <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"}  alignItems="center">
             <Text fontSize="sm" bold textAlign="center"> Curioso para entender como a energia solar funciona e por que ela é tão vantajosa? Descubra tudo sobre essa solução sustentável e comece a fazer escolhas inteligentes para o seu futuro. Clique abaixo e mergulhe nesse conhecimento!</Text>
             <Button onPress={handleCalc} w={"80%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"md" }}>Quero Aprender</Button>

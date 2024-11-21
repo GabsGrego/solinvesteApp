@@ -1,25 +1,92 @@
 import React from 'react';
-import { VStack, Input, Text, Image } from 'native-base';
-import { View, TextInput, Button} from 'react-native';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { VStack, Box, Text, Button, ScrollView } from 'native-base';
+import { NavigationProp, useNavigation, RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../navigation/types';
+import InfoCard from '../components/InfoCard';
+import InfoCard2 from '../components/InfoCard2';
 
 const ResultadoScreen: React.FC = () => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+    const route = useRoute<RouteProp<RootStackParamList, 'Resultado'>>();
+
+  // Dados recebidos via navegação
+    const { estado, consumoEnergia, custoEnergia } = route.params;
+
+  // Valores mockados (deve-se inserir a logica aki)
+    const sistemaIndicado = '4';
+    const potenciaSistema = '5.04 kWp';
+    const producaoEstimativa = '569 kWh/mês';
+    const estimativaInvestimento = 'R$ 14.599,99';
+    const economiaMensal = 'R$ 130,56';
+    const totalEconomia = 'R$ 77.729,81';
+    /*const retornoAmbiental = {
+    co2Evitado: '41,32 toneladas',
+    arvoresNecessarias: '315 árvores',
+    custoPlantarArvores: 'R$ 6.460,00',
+    };*/
 
     const handleHome = () => {
         navigation.navigate('Home');
-    };
-
+};
 
 return (
-    <VStack space={4} padding={5} alignItems="center">
-        <Text fontSize="2xl" bold> Sistema Indicado</Text>
-        <Text fontSize="2xl" bold> Investimento</Text>
-        <Text fontSize="2xl" bold> Retorno do Investimento</Text>
-        <Text fontSize="2xl" bold> Retorno Ambiental</Text>
-        <Button title="Voltar" onPress={handleHome}/>
+    <ScrollView flex={1} contentContainerStyle={{padding: 6}} bg="#FFBC59">
+    <VStack space={4} >
+        <InfoCard
+        title="Sistema indicado"
+        items={[
+            { label: 'Número de módulos', value: sistemaIndicado },
+            { label: 'Potência do sistema', value: potenciaSistema },
+            { label: 'Produção de energia estimada (média anual)', value: producaoEstimativa },
+        ]}
+        footer="Cada raio de sol é uma oportunidade de economizar e cuidar do planeta!"
+        />
+
+        <InfoCard
+        title="Investimento"
+        items={[
+            { label: 'Estimativa de investimento', value: estimativaInvestimento },
+            { label: 'Economia mensal', value: economiaMensal },
+            { label: 'Total economizado em 20 anos', value: totalEconomia },
+        ]}
+        footer="Energia solar é a escolha certa para seu bolso e o planeta!"
+        />
+
+        <InfoCard
+        title="Retorno do Investimento (under development)"
+        items={[
+            { label: '', value: '' },
+        ]}
+        footer=""
+        />
+
+    <InfoCard2
+        title="Retorno Ambiental (estimado em 20 anos)"
+        items={[
+        {
+            icon: 'cloud',
+            value: '41,32 toneladas',
+            description: 'de CO2 que não serão emitidos na atmosfera',
+        },
+        {
+            icon: 'nature',
+            value: '315 árvores',
+            description: 'seriam necessárias para eliminar a quantidade de CO2 da atmosfera',
+        },
+        {
+            icon: 'attach-money',
+            value: 'R$ 6.460,00',
+            description: 'é o custo aproximado para plantar essa quantidade de árvores',
+        },
+        ]}
+    />
+
+        <VStack space={4} mt={4}>
+            <Button colorScheme="orange" onPress={handleHome}>Aprovar proposta</Button>
+            <Button variant="outline" colorScheme="orange" onPress={handleHome}>Voltar ao início</Button>
+        </VStack>
     </VStack>
+    </ScrollView>
     );
 };
 

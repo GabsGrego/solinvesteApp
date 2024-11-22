@@ -3,6 +3,7 @@ export type RootStackParamList = {
     Home: undefined;
     Calculadora: undefined;
     Educacional: undefined;
+    Sobre: undefined;
     Resultado: {
         estado: string;
         consumoEnergia: number;

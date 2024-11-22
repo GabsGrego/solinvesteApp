@@ -15,6 +15,10 @@ const HomeScreen: React.FC = () => {
         navigation.navigate('Calculadora');
     };
 
+    const handleSobre = () => {
+        navigation.navigate('Sobre');
+    };
+
 
 return (
     <VStack flex={1} space={4} bg="#F4EDE7" alignItems="center">
@@ -22,7 +26,7 @@ return (
             <HStack justifyContent="space-between" width="100%">
                 <Text fontSize="3xl" bold textAlign="center" color={"amber.300"}> SOLINVESTE </Text>
                 <IconButton icon={<MaterialIcons name="info-outline" size={25} color="yellow" />}
-                onPress={() => console.log("Info")}/>
+                onPress={handleSobre}/>
             </HStack>
         </Box> 
         <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"}  alignItems="center">

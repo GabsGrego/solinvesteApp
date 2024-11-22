@@ -20,8 +20,12 @@ const CalculadoraScreen: React.FC = () => {
         });
     };
 
+    const handleHome = () => {
+        navigation.navigate('Home');
+    };
+
 return (
-    <VStack flex={1} space={4} padding={1} bg="#FFBC59" alignItems="center">
+    <VStack flex={1} space={3} padding={2} bg="#FFBC59" alignItems="center">
         <VStack padding={3} borderRadius={15} shadow={4} w={"98%"} alignItems="center" bg="#F4EDE7">
         <Text fontSize="sm" bold textAlign="center">
             Digite os dados de sua conta de energia e descubra o quanto você pode economizar com energia solar. 
@@ -71,6 +75,7 @@ return (
             </Pressable>
             </HStack>
         </VStack>
+        <Button onPress={handleHome} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg", textAlign: "center"}}>Voltar ao menu</Button>
     </VStack>
     );
 };

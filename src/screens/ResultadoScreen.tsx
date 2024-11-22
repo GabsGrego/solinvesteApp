@@ -1,5 +1,5 @@
 import React from 'react';
-import { HStack, VStack, Box, Text, Button, ScrollView } from 'native-base';
+import { HStack, VStack, Button, ScrollView } from 'native-base';
 import { NavigationProp, useNavigation, RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../navigation/types';
 import InfoCard from '../components/InfoCard';
@@ -27,7 +27,7 @@ const ResultadoScreen: React.FC = () => {
 
     const handleHome = () => {
         navigation.navigate('Home');
-};
+    };
 
 return (
     <ScrollView flex={1} contentContainerStyle={{padding: 6}} bg="#FFBC59">
@@ -82,7 +82,7 @@ return (
         />
         <HStack space={2} justifyContent={"space-between"} px={2} >
             <Button variant="outline" onPress={handleHome} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg", textAlign: "center"}}>Aprovar proposta</Button>
-            <Button variant="outline" onPress={handleHome} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg", textAlign: "center"}}>Voltar ao início</Button>
+            <Button variant="outline" onPress={handleHome} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg", textAlign: "center"}}>Voltar ao menu</Button>
         </HStack>
     </VStack>
     </ScrollView>

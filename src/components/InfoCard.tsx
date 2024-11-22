@@ -27,11 +27,13 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, items, footer }) => {
             </HStack>
         ))}
         </VStack>
+        <Box padding={2}>
         {footer && (
         <Text mt={4} fontSize="sm" italic color="gray.500" textAlign="center">
             "{footer}"
         </Text>
         )}
+        </Box>
     </Box>
     );
 };

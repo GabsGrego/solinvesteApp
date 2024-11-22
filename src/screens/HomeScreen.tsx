@@ -29,11 +29,11 @@ return (
                 onPress={handleSobre}/>
             </HStack>
         </Box> 
-        <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"}  alignItems="center">
+        <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"} alignItems="center" bg="#FFFFFFFF">
             <Text fontSize="sm" bold textAlign="center"> Curioso para entender como a energia solar funciona e por que ela é tão vantajosa? Descubra tudo sobre essa solução sustentável e comece a fazer escolhas inteligentes para o seu futuro. Clique abaixo e mergulhe nesse conhecimento!</Text>
             <Button onPress={handleEduc} w={"80%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"md" }}>Quero Aprender</Button>
         </VStack>
-        <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"}  alignItems="center">
+        <VStack space={4} padding={3} borderRadius={15} shadow={4} w={"90%"} alignItems="center" bg="#FFFFFFFF">
             <Text fontSize="sm" bold textAlign="center"> Descubra agora como a energia solar pode transformar suas finanças! Informe seus dados de consumo e veja em segundos quanto você pode economizar e investir para ter uma energia limpa e sustentável na sua propriedade. Clique abaixo e comece a economizar hoje mesmo!</Text>
             <Button onPress={handleCalc} w={"80%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"md" }}>Calcule já</Button>
         </VStack>        

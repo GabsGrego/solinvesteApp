@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { VStack, Text, Input, Select, Button, Box, HStack, Pressable, Center, IconButton  } from 'native-base';
+import { VStack, Text, Input, Select, Button, Box, HStack, Pressable, Center, IconButton, Modal, Image  } from 'native-base';
 import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../navigation/types';
 
 const CalculadoraScreen: React.FC = () => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+    const [showModal, setShowModal] = useState(false);
+    const [showModal2, setShowModal2] = useState(false);
 
   // Estados para armazenar os dados do usuário
     const [estado, setEstado] = useState('');
@@ -40,13 +43,13 @@ return (
         <HStack>
             <Input mt={1} width={"90%"} placeholder="Digite apenas o número" value={consumoEnergia} onChangeText={setConsumoEnergia} keyboardType="numeric" bg="white"/>
             <IconButton icon={<MaterialIcons name="info-outline" size={25} color="black" />}
-                onPress={() => console.log("Info")}/>
+                onPress={() => setShowModal(true)} borderRadius="full" _icon={{ color: "orange.600", size: "lg" }} />
         </HStack>
         <Text mt={3} fontSize="sm" bold textAlign="center"> Insira o custo de energia (R$)</Text>
         <HStack>
             <Input mt={1} width={"90%"} placeholder="Digite apenas o número" value={custoEnergia} onChangeText={setCustoEnergia} keyboardType="numeric" bg="white"/>
             <IconButton icon={<MaterialIcons name="info-outline" size={25} color="black" />}
-                onPress={() => console.log("Info")}/>
+                onPress={() => setShowModal2(true)} borderRadius="full" _icon={{ color: "orange.600", size: "lg" }} />
         </HStack>
         <Button mt={3} onPress={handleCalcular} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg" }}>Calcular</Button>
         </VStack>
@@ -76,6 +79,32 @@ return (
             </HStack>
         </VStack>
         <Button onPress={handleHome} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"lg", textAlign: "center"}}>Voltar ao menu</Button>
+
+        <Modal isOpen={showModal} onClose={() => setShowModal(false)} size="md">
+        <Modal.Content>
+            <Modal.CloseButton />
+            <Modal.Header bg={"gray.100"}>Onde encontrar esta informação?</Modal.Header>
+            <Modal.Body bg={"gray.700"}>
+                <Box alignItems="center">
+                    <Image source={require('../components/infoConsumo.png')}
+                    alt="Exemplo de conta de luz" size="xl" borderRadius="md"/>
+                </Box>
+            </Modal.Body>
+        </Modal.Content>
+        </Modal>
+
+        <Modal isOpen={showModal2} onClose={() => setShowModal2(false)} size="md">
+        <Modal.Content>
+            <Modal.CloseButton />
+            <Modal.Header bg={"gray.100"}>Onde encontrar esta informação?</Modal.Header>
+            <Modal.Body bg={"gray.700"}>
+                <Box alignItems="center">
+                    <Image source={require('../components/infoCusto.png')}
+                    alt="Exemplo de conta de luz" size="xl" borderRadius="md"/>
+                </Box>
+            </Modal.Body>
+        </Modal.Content>
+        </Modal>
     </VStack>
     );
 };

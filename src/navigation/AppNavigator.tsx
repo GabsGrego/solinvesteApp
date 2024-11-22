@@ -14,7 +14,7 @@ const AppNavigator = () => {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
-      <Stack.Screen name="Calculadora" component={CalculadoraScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="Calculadora" component={CalculadoraScreen} />
       <Stack.Screen name="Resultado" component={ResultadoScreen} />
       <Stack.Screen name="Educacional" component={EducScreen}/>
       <Stack.Screen name="Sobre" component={SobreScreen} options={{ headerShown: false }}/>

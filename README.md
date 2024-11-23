@@ -40,6 +40,8 @@ e os beneficios que ele trará ao meio ambiente por fazer esse investimento.
 
 ![Alt Text](src/components/images/sobreScreenImage.png)
 
-## Links dos Videos
+## Links
 
 Link do PITCH - https://youtu.be/8vf6YciO0nc
+
+Link do FIGMA - https://www.figma.com/design/GixD5ZUiPcFwo9TBc9auZM/FIAP---3%C2%BA-semestre?node-id=118-2&t=hKAYYQoX6LkjWIsV-1

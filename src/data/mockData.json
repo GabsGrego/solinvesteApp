@@ -1,0 +1,37 @@
+{
+    "login": [
+        { "label": "Número de módulos", "value": "4" },
+        { "label": "Potência do sistema", "value": "5.04 kWp" },
+        { "label": "Produção de energia estimada (média anual)", "value": "569 kWh/mês" }
+    ],
+
+    "sistemaIndicado": [
+        { "label": "Número de módulos", "value": "4" },
+        { "label": "Potência do sistema", "value": "5.04 kWp" },
+        { "label": "Produção de energia estimada (média anual)", "value": "569 kWh/mês" }
+    ],
+
+    "investimento": [
+        { "label": "Estimativa de investimento", "value": "R$ 14.599,99" },
+        { "label": "Economia mensal", "value": "R$ 130,56" },
+        { "label": "Total economizado em 20 anos", "value": "R$ 77.729,81" }
+    ],
+    
+    "retornoAmbiental": [
+        {
+        "icon": "cloud",
+        "value": "41,32 toneladas",
+        "description": "de CO2 que não serão emitidos na atmosfera"
+        },
+        {
+        "icon": "nature",
+        "value": "315 árvores",
+        "description": "seriam necessárias para eliminar a quantidade de CO2 da atmosfera"
+        },
+        {
+        "icon": "attach-money",
+        "value": "R$ 6.460,00",
+        "description": "é o custo aproximado para plantar essa quantidade de árvores"
+        }
+    ]
+}

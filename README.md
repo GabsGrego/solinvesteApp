@@ -25,6 +25,13 @@ através disso, realizará os cálculos necessários para fornecer estimativas s
 para montar o sistema de energia solar ideal para seu imóvel, quando ele terá retorno sobre esse investimento
 e os beneficios que ele trará ao meio ambiente por fazer esse investimento.
 
+## Orientações de Uso
+
+- Dados para login podem ser encontrados no arquivo -> (src/data/users.json)
+
+- Calculadora não está pronta, porem o botão Calcular levará a pagina de Resultado com dados mockados para demonstração
+
+- Scrowview com problemas, impedindo de visualizar todo o conteudo das paginas Educacional e Resultado
 
 ## Imagens da Aplicação
 
@@ -40,8 +47,11 @@ e os beneficios que ele trará ao meio ambiente por fazer esse investimento.
 
 ![Alt Text](src/components/images/sobreScreenImage.png)
 
+
 ## Links
 
 Link do PITCH - https://youtu.be/8vf6YciO0nc
+
+Link da Demonstração do App - https://youtu.be/8KSBzxFQK_w
 
 Link do FIGMA - https://www.figma.com/design/GixD5ZUiPcFwo9TBc9auZM/FIAP---3%C2%BA-semestre?node-id=118-2&t=hKAYYQoX6LkjWIsV-1

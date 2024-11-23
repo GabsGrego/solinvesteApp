@@ -86,7 +86,7 @@ return (
             <Modal.Header bg={"gray.100"}>Onde encontrar esta informação?</Modal.Header>
             <Modal.Body bg={"gray.700"}>
                 <Box alignItems="center">
-                    <Image source={require('../components/infoConsumo.png')}
+                    <Image source={require('../components/images/infoConsumo.png')}
                     alt="Exemplo de conta de luz" size="xl" borderRadius="md"/>
                 </Box>
             </Modal.Body>
@@ -99,7 +99,7 @@ return (
             <Modal.Header bg={"gray.100"}>Onde encontrar esta informação?</Modal.Header>
             <Modal.Body bg={"gray.700"}>
                 <Box alignItems="center">
-                    <Image source={require('../components/infoCusto.png')}
+                    <Image source={require('../components/images/infoCusto.png')}
                     alt="Exemplo de conta de luz" size="xl" borderRadius="md"/>
                 </Box>
             </Modal.Body>

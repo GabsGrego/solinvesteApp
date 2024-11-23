@@ -16,10 +16,10 @@ const LoginScreen: React.FC = () => {
     };
 
     return (
-        <ImageBackground source={require('../components/bgLogin.jpg')} style={styles.background}>
+        <ImageBackground source={require('../components/images/bgLogin.jpg')} style={styles.background}>
         <VStack space={4} px={5} pt={10} alignItems="center" justifyContent="center" flex={1}>
             <Box w={"100%"} mt={8} p={2} alignItems={"center"}>
-            <Image source={require('../components/logoApp.png')} alt="img" size={'sm'} width={"100%"} />
+            <Image source={require('../components/images/logoApp.png')} alt="img" size={'sm'} width={"100%"} />
             </Box>
             <Box padding={2} bg={"white"} borderRadius={8}>
                 <Text fontSize="md" textAlign="center" color="black">
@@ -31,7 +31,7 @@ const LoginScreen: React.FC = () => {
             <Pressable alignSelf={"flex-end"} onPress={handleSenha}><Text mt={-3} mr={5} fontSize="xs" color="blue.700">Esqueceu a senha?</Text></Pressable>
             <Button my={4} onPress={handleLogin} w={"50%"} borderRadius={8} bg="orange.400" _text={{ bold: true, color: "white", fontSize:"md" }}>Login</Button>
             <Box w={"100%"} mt={4} p={2} alignItems={"center"}>
-            <Image source={require('../components/logoSolari.png')} alt="img" size={'md'} w={"60%"}/>
+            <Image source={require('../components/images/logoSolari.png')} alt="img" size={'md'} w={"60%"}/>
             </Box>
         </VStack>
         </ImageBackground>

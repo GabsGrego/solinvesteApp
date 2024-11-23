@@ -14,7 +14,7 @@ const EducScreen: React.FC = () => {
 return (
     <ScrollView flex={1} bg="#FFBC59">
         <VStack space={1} alignItems="center" width="100%">
-            <Image source={require('../components/cartImage.jpg')} alt="img" size={"xl"} width={"100%"}/>
+            <Image source={require('../components/images/cartImage.jpg')} alt="img" size={"xl"} width={"100%"}/>
         <VStack space={4} padding={3} borderRadius={5} shadow={4} w={"98%"} alignItems="center" bg="#F4EDE7">
         <Text fontSize="lg" bold >
             Os benefícios da Energia Solar
